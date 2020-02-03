@@ -38,7 +38,7 @@
       </section>
 
     </main>
-    <div id="modelViewModal" class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-hidden="true">
+    <div id="modelViewModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog modal-xl" role="document">
         <div class="modal-content">
           <div class="modal-header">
@@ -79,6 +79,11 @@
         $('#modelViewMarmoset').append(modelEle.domRoot);
         modelEle.loadScene();
       }
+
+      $('#modelViewModal').on('hide.bs.modal', function (e) {
+        modelEle.unload();
+        $('#modelViewMarmoset').empty();
+      });
     </script>
   </body>
 </html>
