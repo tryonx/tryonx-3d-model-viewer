@@ -32,7 +32,11 @@
       <section class="jumbotron text-center">
         <div class="container">
           <ul class="list-group list-group-flush">
-            <li class="list-group-item" onclick="javascript:openModel('champYellowCrystalClear')">champ yellow crystal clear</li>
+            <li class="list-group-item" onclick="javascript:openModel('champ_cyan_cyan')">champ cyan cyan</li>
+            <li class="list-group-item" onclick="javascript:openModel('flex_black_magenta')">flex black magenta</li>
+            <li class="list-group-item" onclick="javascript:openModel('flex_yellowcrystal_clear')">flex yellow crystal clear</li>
+            <li class="list-group-item" onclick="javascript:openModel('nalari_black_clear')">nalari black clear</li>
+            <li class="list-group-item" onclick="javascript:openModel('nalari_black_yellow')">nalari black yellow</li>
           </ul>
         </div>
       </section>
@@ -48,7 +52,13 @@
             </button>
           </div>
           <div class="modal-body">
-            <div id="modelViewMarmoset">
+            <div id="loadingSpinner" style="display: block; text-align: center;">
+              <div class="spinner-border">
+                <span class="sr-only">Loading...</span>
+              </div>
+            </div>
+            
+            <div id="modelViewMarmoset" style="display: none;">
 
             </div>
           </div>
@@ -66,23 +76,38 @@
 
     <script>
       var modelEle;
+      var isLoading = false;
+
       function openModel(modelName) {
-        var width = Math.min(document.documentElement.clientWidth, 1140) * 0.85;
+        if (isLoading) {
+          return;
+        }
+
+        isLoading = true;
+        $('#modelViewModal').modal();
+
+        var width = $('#modelViewMarmoset').width() - 90;
         var height = Math.min(document.documentElement.clientHeight, 400);
 
         $('#modelViewModalTitle').text(modelName);
-        modelEle = new marmoset.WebViewer(width, height, './resources/models/' + modelName + '/model.mview' );
-        
+        modelEle = new marmoset.WebViewer(width, height, './resources/models/' + modelName + '.mview' );
         modelEle.onLoad = function() {
-          $('#modelViewModal').modal();
-        };
+          setTimeout(function() {
+            $('#loadingSpinner').css('display', 'none');
+            $('#modelViewMarmoset').css('display', '');
+          }, 500);
+        }
         $('#modelViewMarmoset').append(modelEle.domRoot);
         modelEle.loadScene();
       }
 
       $('#modelViewModal').on('hide.bs.modal', function (e) {
+        isLoading = false;
         modelEle.unload();
+        $('#loadingSpinner').css('display', '');
+        $('#modelViewMarmoset').css('display', 'none');
         $('#modelViewMarmoset').empty();
+        
       });
     </script>
   </body>
