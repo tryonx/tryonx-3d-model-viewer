@@ -93,12 +93,14 @@
 					let scope = this;
 					let objLoader2 = new OBJLoader2();
 					let callbackOnLoad = function ( object3d ) {
+						console.log(object3d);
 						scope.scene.add( object3d );
 						console.log( 'Loading complete: ' + modelName );
 						scope._reportProgress( { detail: { text: '' } } );
 					};
 
 					let onLoadMtl = function ( mtlParseResult ) {
+						console.log(mtlParseResult)
 						objLoader2.setModelName( modelName );
 						objLoader2.setLogging( true, true );
 						objLoader2.addMaterials( MtlObjBridge.addMaterialsFromMtlLoader( mtlParseResult ), true );
