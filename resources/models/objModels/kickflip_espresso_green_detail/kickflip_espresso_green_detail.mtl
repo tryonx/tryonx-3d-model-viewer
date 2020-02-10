@@ -1,0 +1,61 @@
+# 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
+# File Created: 28.01.2020 23:25:46
+
+newmtl kickflip_espresso_front_detail
+	Ns 33.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.8820 0.8820 0.8820
+	Ke 0.0000 0.0000 0.0000
+	map_Ka kickflip_espresso_green_detail.png
+	map_Kd kickflip_espresso_green_detail.png
+	map_d kickflip_espresso_green_alpha_detail.png
+
+newmtl kickflip_espresso_temple_detail
+	Ns 37.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.9360 0.9360 0.9360
+	Ke 0.0000 0.0000 0.0000
+	map_Ka kickflip_espresso_green_detail.png
+	map_Kd kickflip_espresso_green_detail.png
+	map_d kickflip_espresso_green_alpha_detail.png
+
+newmtl kickflip_espresso_lens_green_detail
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5882 0.5882 0.5882
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka kickflip_espresso_lens_green_detail.png
+	map_Kd kickflip_espresso_lens_green_detail.png
+	map_d kickflip_espresso_lens_green_alpha_detail.png
+
+newmtl kickflip_espresso_metal_detail
+	Ns 27.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5882 0.5882 0.5882
+	Kd 0.5882 0.5882 0.5882
+	Ks 1.3410 1.3410 1.3410
+	Ke 0.0000 0.0000 0.0000
+	map_Ka kickflip_espresso_green_detail.png
+	map_Kd kickflip_espresso_green_detail.png

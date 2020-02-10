@@ -1,0 +1,61 @@
+# 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
+# File Created: 28.01.2020 06:29:54
+
+newmtl motiver_magenta_front_detail
+	Ns 38.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5882 0.5882 0.5882
+	Kd 0.5882 0.5882 0.5882
+	Ks 1.8090 1.8090 1.8090
+	Ke 0.0000 0.0000 0.0000
+	map_Ka motiver_magenta_clear_detail.png
+	map_Kd motiver_magenta_clear_detail.png
+	map_d motiver_magenta_clear_alpha_detail.png
+
+newmtl motiver_magenta_temple_detail
+	Ns 36.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5882 0.5882 0.5882
+	Kd 0.5882 0.5882 0.5882
+	Ks 1.7640 1.7640 1.7640
+	Ke 0.0000 0.0000 0.0000
+	map_Ka motiver_magenta_clear_detail.png
+	map_Kd motiver_magenta_clear_detail.png
+	map_d motiver_magenta_clear_alpha_detail.png
+
+newmtl motiver_magenta_lens_clear_detail
+	Ns 47.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5882 0.5882 0.5882
+	Kd 0.5882 0.5882 0.5882
+	Ks 1.1700 1.1700 1.1700
+	Ke 0.0000 0.0000 0.0000
+	map_Ka motiver_magenta_lens_clear_detail.png
+	map_Kd motiver_magenta_lens_clear_detail.png
+	map_d motiver_magenta_lens_clear_alpha_detail.png
+
+newmtl motiver_magenta_metal_detail
+	Ns 40.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5882 0.5882 0.5882
+	Kd 0.5882 0.5882 0.5882
+	Ks 1.3590 1.3590 1.3590
+	Ke 0.0000 0.0000 0.0000
+	map_Ka motiver_magenta_clear_detail.png
+	map_Kd motiver_magenta_clear_detail.png

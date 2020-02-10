@@ -1,0 +1,61 @@
+# 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
+# File Created: 28.01.2020 14:54:55
+
+newmtl motiver_vintage_tortoise_front_detail
+	Ns 45.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5882 0.5882 0.5882
+	Kd 0.5882 0.5882 0.5882
+	Ks 1.0530 1.0530 1.0530
+	Ke 0.0000 0.0000 0.0000
+	map_Ka motiver_vintage tortoise_brown_detail.png
+	map_Kd motiver_vintage tortoise_brown_detail.png
+	map_d motiver_vintage tortoise_brown_alpha_detail.png
+
+newmtl motiver_vintage_tortoise_temple_detail
+	Ns 41.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5882 0.5882 0.5882
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.9180 0.9180 0.9180
+	Ke 0.0000 0.0000 0.0000
+	map_Ka motiver_vintage tortoise_brown_detail.png
+	map_Kd motiver_vintage tortoise_brown_detail.png
+	map_d motiver_vintage tortoise_brown_alpha_detail.png
+
+newmtl motiver_vintage_tortoise_lens_brown_detail
+	Ns 47.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5882 0.5882 0.5882
+	Kd 0.5882 0.5882 0.5882
+	Ks 1.1700 1.1700 1.1700
+	Ke 0.0000 0.0000 0.0000
+	map_Ka motiver_vintage tortoise_lens_brown_detail.png
+	map_Kd motiver_vintage tortoise_lens_brown_detail.png
+	map_d motiver_vintage tortoise_lens_brown_alpha_detail.png
+
+newmtl motiver_vintage_tortoise_metal_detail
+	Ns 34.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5882 0.5882 0.5882
+	Kd 0.5882 0.5882 0.5882
+	Ks 1.1160 1.1160 1.1160
+	Ke 0.0000 0.0000 0.0000
+	map_Ka motiver_vintage tortoise_brown_detail.png
+	map_Kd motiver_vintage tortoise_brown_detail.png

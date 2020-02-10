@@ -1,0 +1,61 @@
+# 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
+# File Created: 28.01.2020 20:38:32
+
+newmtl drip_black_front_detail
+	Ns 45.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5882 0.5882 0.5882
+	Kd 0.5882 0.5882 0.5882
+	Ks 1.8450 1.8450 1.8450
+	Ke 0.0000 0.0000 0.0000
+	map_Ka drip_black_cyan_detail.png
+	map_Kd drip_black_cyan_detail.png
+	map_d drip_black_cyan_alpha_detail.png
+
+newmtl drip_black_temple_detail
+	Ns 39.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5882 0.5882 0.5882
+	Kd 0.5882 0.5882 0.5882
+	Ks 2.4840 2.4840 2.4840
+	Ke 0.0000 0.0000 0.0000
+	map_Ka drip_black_cyan_detail.png
+	map_Kd drip_black_cyan_detail.png
+	map_d drip_black_cyan_alpha_detail.png
+
+newmtl drip_black_lens_cyan_detail
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5882 0.5882 0.5882
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka drip_black_lens_cyan_detail.png
+	map_Kd drip_black_lens_cyan_detail.png
+	map_d drip_black_lens_cyan_alpha_detail.png
+
+newmtl drip_black_metal_detail
+	Ns 34.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5882 0.5882 0.5882
+	Kd 0.5882 0.5882 0.5882
+	Ks 1.3140 1.3140 1.3140
+	Ke 0.0000 0.0000 0.0000
+	map_Ka drip_black_cyan_detail.png
+	map_Kd drip_black_cyan_detail.png

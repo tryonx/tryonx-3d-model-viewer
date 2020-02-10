@@ -1,0 +1,61 @@
+# 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
+# File Created: 28.01.2020 22:14:06
+
+newmtl crew_magenta_front_detail
+	Ns 45.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5882 0.5882 0.5882
+	Kd 0.5882 0.5882 0.5882
+	Ks 1.8450 1.8450 1.8450
+	Ke 0.0000 0.0000 0.0000
+	map_Ka crew_magenta_magenta_detail.png
+	map_Kd crew_magenta_magenta_detail.png
+	map_d crew_magenta_magenta_alpha_detail.png
+
+newmtl crew_magenta_temple_detail
+	Ns 33.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5882 0.5882 0.5882
+	Kd 0.5882 0.5882 0.5882
+	Ks 1.8450 1.8450 1.8450
+	Ke 0.0000 0.0000 0.0000
+	map_Ka crew_magenta_magenta_detail.png
+	map_Kd crew_magenta_magenta_detail.png
+	map_d crew_magenta_magenta_alpha_detail.png
+
+newmtl crew_magenta_lens_magenta_detail
+	Ns 52.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5882 0.5882 0.5882
+	Kd 0.5882 0.5882 0.5882
+	Ks 1.1430 1.1430 1.1430
+	Ke 0.0000 0.0000 0.0000
+	map_Ka crew_magenta_lens_magenta_detail.png
+	map_Kd crew_magenta_lens_magenta_detail.png
+	map_d crew_magenta_lens_magenta_alpha_detail.png
+
+newmtl crew_magenta_metal_detail
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5882 0.5882 0.5882
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.9270 0.9270 0.9270
+	Ke 0.0000 0.0000 0.0000
+	map_Ka crew_magenta_magenta_detail.png
+	map_Kd crew_magenta_magenta_detail.png
