@@ -21,6 +21,16 @@
 		<script type="module">
 			const urlParams = new URLSearchParams(window.location.search);
 			const modelName = urlParams.get('model');
+			let light = 0.1;
+			let background = 0xffffff
+
+			if (urlParams.get('light') != null) {
+				light = urlParams.get('light');
+			}
+			if (urlParams.get('background') != null) {
+				background = urlParams.get('background');
+			}
+			console.log(background);
 
 			'use strict';
 
@@ -69,7 +79,7 @@
 					// this.renderer.setClearColor( 0xffffff, 0);
 
 					this.scene = new THREE.Scene();
-					var color = new THREE.Color( 'white' );
+					var color = new THREE.Color( background );
 					this.scene.background = color;
 
 					this.camera = new THREE.PerspectiveCamera( this.cameraDefaults.fov, this.aspectRatio, this.cameraDefaults.near, this.cameraDefaults.far );
@@ -80,10 +90,10 @@
 					this.controls.zoomSpeed = 4;
 
 					let ambientLight = new THREE.AmbientLight( 0x404040 );
-					let directionalLight1 = new THREE.DirectionalLight( 0xffffff, 0.1 );
-					let directionalLight2 = new THREE.DirectionalLight( 0xffffff, 0.1 );
+					let directionalLight1 = new THREE.DirectionalLight( 0xffffff, light );
+					let directionalLight2 = new THREE.DirectionalLight( 0xffffff, light );
 
-					directionalLight1.position.set( -200, -100, 200 );
+					directionalLight1.position.set( 200, 100, -200 );
 					directionalLight2.position.set( 200, 100, -200 );
 
 					this.scene.add( directionalLight1 );
