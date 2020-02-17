@@ -43,7 +43,7 @@
 				this.cameraDefaults = {
 					posCamera: new THREE.Vector3( 0.0, 30.0, 30.0 ),
 					posCameraTarget: new THREE.Vector3( 0, 0, 0 ),
-					near: 1,
+					near: 10,
 					far: 10000,
 					fov: 45
 				};
@@ -68,7 +68,7 @@
 					// this.renderer.setClearColor( 0xffffff, 0);
 
 					this.scene = new THREE.Scene();
-					var color = new THREE.Color( 'black' );
+					var color = new THREE.Color( 'white' );
 					this.scene.background = color;
 
 					this.camera = new THREE.PerspectiveCamera( this.cameraDefaults.fov, this.aspectRatio, this.cameraDefaults.near, this.cameraDefaults.far );
@@ -79,11 +79,11 @@
 					this.controls.zoomSpeed = 4;
 
 					let ambientLight = new THREE.AmbientLight( 0x404040 );
-					let directionalLight1 = new THREE.DirectionalLight( 0xffffff, 0.7 );
-					let directionalLight2 = new THREE.DirectionalLight( 0xffffff, 0.7 );
+					let directionalLight1 = new THREE.DirectionalLight( 0xffffff, 0.2 );
+					let directionalLight2 = new THREE.DirectionalLight( 0xffffff, 0.2 );
 
-					directionalLight1.position.set( - 100, - 50, 100 );
-					directionalLight2.position.set( 100, 50, - 100 );
+					directionalLight1.position.set( -200, -100, 200 );
+					directionalLight2.position.set( 200, 100, -200 );
 
 					this.scene.add( directionalLight1 );
 					this.scene.add( directionalLight2 );
