@@ -30,6 +30,7 @@
 
 			import { MTLLoader } from "../../resources/jsm/loaders/MTLLoader.js";
 			import { OBJLoader2 } from "../../resources/jsm/loaders/OBJLoader2.js";
+			import { OBJLoader2Parallel } from "../../resources/jsm/loaders/OBJLoader2Parallel.js";
 			import { MtlObjBridge } from "../../resources/jsm/loaders/obj2/bridge/MtlObjBridge.js";
 
 
@@ -79,8 +80,8 @@
 					this.controls.zoomSpeed = 4;
 
 					let ambientLight = new THREE.AmbientLight( 0x404040 );
-					let directionalLight1 = new THREE.DirectionalLight( 0xffffff, 0.2 );
-					let directionalLight2 = new THREE.DirectionalLight( 0xffffff, 0.2 );
+					let directionalLight1 = new THREE.DirectionalLight( 0xffffff, 0.1 );
+					let directionalLight2 = new THREE.DirectionalLight( 0xffffff, 0.1 );
 
 					directionalLight1.position.set( -200, -100, 200 );
 					directionalLight2.position.set( 200, 100, -200 );
@@ -95,7 +96,7 @@
 
 
 					let scope = this;
-					let objLoader2 = new OBJLoader2();
+					let objLoader2 = new OBJLoader2Parallel();
 					let callbackOnLoad = function ( object3d ) {
 						scope.scene.add( object3d );
 						console.log( 'Loading complete: ' + modelName );
