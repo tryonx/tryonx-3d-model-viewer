@@ -19,6 +19,14 @@
 		</div>
 
 		<script type="module">
+			var filter = "win16|win32|win64|mac";
+			var isMobile = false;
+			if (navigator.platform) {
+				if (filter.indexOf(navigator.platform.toLocaleLowerCase()) < 0) {
+					isMobile = true;
+				}
+			}
+
 			const urlParams = new URLSearchParams(window.location.search);
 			const modelName = urlParams.get('model');
 			let light = 0.1;
@@ -30,8 +38,7 @@
 			if (urlParams.get('background') != null) {
 				background = urlParams.get('background');
 			}
-			console.log(background);
-
+			
 			'use strict';
 
 			import * as THREE from '../../resources/js/three/three.module.js';
@@ -85,9 +92,9 @@
 					this.camera = new THREE.PerspectiveCamera( this.cameraDefaults.fov, this.aspectRatio, this.cameraDefaults.near, this.cameraDefaults.far );
 					this.resetCamera();
 					this.controls = new TrackballControls( this.camera, this.renderer.domElement );
-					this.controls.panSpeed = 100;
-					this.controls.rotateSpeed = 5;
-					this.controls.zoomSpeed = 4;
+					this.controls.panSpeed = isMobile ? 1 : 100;
+					this.controls.rotateSpeed = isMobile ? 2.5 : 5;
+					this.controls.zoomSpeed = isMobile ? 1 : 4;
 
 					let ambientLight = new THREE.AmbientLight( 0x404040 );
 					let directionalLight1 = new THREE.DirectionalLight( 0xffffff, light );
@@ -102,19 +109,14 @@
 				},
 
 				initContent: function () {
-					this._reportProgress( { detail: { text: 'Loading: ' + modelName } } );
-
-
 					let scope = this;
 					let objLoader2 = new OBJLoader2Parallel();
 					let callbackOnLoad = function ( object3d ) {
 						scope.scene.add( object3d );
-						console.log( 'Loading complete: ' + modelName );
-						scope._reportProgress( { detail: { text: '' } } );
+						// scope._reportProgress( { detail: { text: '' } } );
 					};
 
 					let onLoadMtl = function ( mtlParseResult ) {
-						console.log(mtlParseResult)
 						objLoader2.setModelName( modelName );
 						objLoader2.setLogging( true, true );
 						objLoader2.addMaterials( MtlObjBridge.addMaterialsFromMtlLoader( mtlParseResult ), true );
@@ -181,7 +183,6 @@
 
 			window.addEventListener( 'resize', resizeWindow, false );
 
-			console.log( 'Starting initialisation phase...' );
 			app.initGL();
 			app.resizeDisplayGL();
 			app.initContent();
