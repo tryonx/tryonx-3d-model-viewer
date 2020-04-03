@@ -4,10 +4,26 @@
 		<title>three.js webgl - OBJLoader + MTLLoader</title>
 		<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-    <link href="../../resources/css/main.css" rel="stylesheet">
+		<link href="../../resources/css/main.css" rel="stylesheet">
+		<script src="../../resources/js/jscolor.js"></script>
 	</head>
 
 	<body>
+		<div>
+			<button id="x-up-btn">x+</button>
+			<button id="x-down-btn">x-</button>
+			<button id="x-stop-btn">x stop</button>
+			&nbsp;
+			<button id="y-up-btn">y+</button>
+			<button id="y-down-btn">y-</button>
+			<button id="y-stop-btn">y stop</button>
+			&nbsp;
+			<button id="z-up-btn">z+</button>
+			<button id="z-down-btn">z-</button>
+			<button id="z-stop-btn">z stop</button>
+			&nbsp;
+			Background Color: <input id="background-color" class="jscolor {closable:true,closeText:'확인'}" value="FFFFFF">
+		</div>
 		<div id="glFullscreen">
 			<canvas id="example"></canvas>
 		</div>
@@ -30,13 +46,9 @@
 			const urlParams = new URLSearchParams(window.location.search);
 			const modelName = urlParams.get('model');
 			let light = 0.1;
-			let background = 0xffffff
-
+			
 			if (urlParams.get('light') != null) {
 				light = urlParams.get('light');
-			}
-			if (urlParams.get('background') != null) {
-				background = urlParams.get('background');
 			}
 			
 			'use strict';
@@ -53,13 +65,18 @@
 
 			const OBJLoader2Example = function ( elementToBindTo ) {
 				this.renderer = null;
+				this.glassesObject = null;
+				this.rotateSpeedX = 0;
+				this.rotateSpeedY = 0.05;
+				this.rotateSpeedZ = 0;
+
 				this.canvas = elementToBindTo;
 				this.aspectRatio = 1;
 				this.recalcAspectRatio();
 
 				this.scene = null;
 				this.cameraDefaults = {
-					posCamera: new THREE.Vector3( 0.0, 30.0, 30.0 ),
+					posCamera: new THREE.Vector3( 0.0, 0.0, 40.0 ),
 					posCameraTarget: new THREE.Vector3( 0, 0, 0 ),
 					near: 10,
 					far: 10000,
@@ -86,7 +103,7 @@
 					// this.renderer.setClearColor( 0xffffff, 0);
 
 					this.scene = new THREE.Scene();
-					var color = new THREE.Color( background );
+					var color = new THREE.Color( 'rgb(255,255,255)' );
 					this.scene.background = color;
 
 					this.camera = new THREE.PerspectiveCamera( this.cameraDefaults.fov, this.aspectRatio, this.cameraDefaults.near, this.cameraDefaults.far );
@@ -112,8 +129,8 @@
 					let scope = this;
 					let objLoader2 = new OBJLoader2Parallel();
 					let callbackOnLoad = function ( object3d ) {
-						scope.scene.add( object3d );
-						// scope._reportProgress( { detail: { text: '' } } );
+						scope.glassesObject = object3d;
+						scope.scene.add( scope.glassesObject );
 					};
 
 					let onLoadMtl = function ( mtlParseResult ) {
@@ -167,7 +184,20 @@
 					this.controls.update();
 					this.renderer.toneMappingExposure = 2;
 					this.renderer.render( this.scene, this.camera );
+				},
+
+				rotateGlaases: function() {
+					if (this.glassesObject) {
+						this.glassesObject.rotation.x -= this.rotateSpeedX;
+						this.glassesObject.rotation.y -= this.rotateSpeedY;
+						this.glassesObject.rotation.z -= this.rotateSpeedZ;
+					}
+				},
+
+				animate: function() {
+					this.rotateGlaases();
 				}
+
 			};
 
 			let app = new OBJLoader2Example( document.getElementById( 'example' ) );
@@ -179,6 +209,7 @@
 			let render = function () {
 				requestAnimationFrame( render );
 				app.render();
+				app.animate();
 			};
 
 			window.addEventListener( 'resize', resizeWindow, false );
@@ -188,6 +219,61 @@
 			app.initContent();
 
 			render();
+
+			
+			function startRotate (axis) {
+				app.rotateGlaases(axis);
+			}
+
+			let speedRate = 0.05;
+			function speedChange(type, axis) {
+				if (axis === 'x') {
+					if (type === 'up') app.rotateSpeedX += speedRate;
+					else if (type === 'down') app.rotateSpeedX -= speedRate;
+					else if (type === 'stop') {
+						app.rotateSpeedX = 0;
+						app.glassesObject.rotation.x = 0;
+					}
+				}
+				else if (axis === 'y') {
+					if (type === 'up') app.rotateSpeedY += speedRate;
+					else if (type === 'down') app.rotateSpeedY -= speedRate;
+					else if (type === 'stop') {
+						app.rotateSpeedY = 0;
+						app.glassesObject.rotation.y = 0;
+					}
+				}
+				else if (axis === 'z') {
+					if (type === 'up') app.rotateSpeedZ += speedRate;
+					else if (type === 'down') app.rotateSpeedZ -= speedRate;
+					else if (type === 'stop') {
+						app.rotateSpeedZ = 0;
+						app.glassesObject.rotation.z = 0;
+					} 
+				}
+			}
+				
+
+			function addRotateBtnEvent(type, axis) {
+				var eleId = axis + '-' + type + '-btn';
+				document.getElementById(eleId).onclick = function() {
+					speedChange(type, axis);
+				}
+			}
+
+			addRotateBtnEvent('up', 'x');
+			addRotateBtnEvent('down', 'x');
+			addRotateBtnEvent('stop', 'x');
+			addRotateBtnEvent('up', 'y');
+			addRotateBtnEvent('down', 'y');
+			addRotateBtnEvent('stop', 'y');
+			addRotateBtnEvent('up', 'z');
+			addRotateBtnEvent('down', 'z');
+			addRotateBtnEvent('stop', 'z');
+			
+			document.getElementById('background-color').onchange = function() {
+				app.scene.background = new THREE.Color( document.getElementById('background-color').style.getPropertyValue('background-color') );
+			}
 
 		</script>
 	</body>

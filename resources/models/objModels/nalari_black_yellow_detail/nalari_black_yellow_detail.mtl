@@ -12,8 +12,8 @@ newmtl nalari_black_front_detail
 	Kd 0.5882 0.5882 0.5882
 	Ks 0.8820 0.8820 0.8820
 	Ke 0.0000 0.0000 0.0000
-	map_Ka D:\10_Other Works\TRYONIX_ALPENISTAR\nalari_black_yellow_detail\nalari_black_yellow_detail.png
-	map_Kd D:\10_Other Works\TRYONIX_ALPENISTAR\nalari_black_yellow_detail\nalari_black_yellow_detail.png
+	map_Ka nalari_black_yellow_detail.png
+	map_Kd nalari_black_yellow_detail.png
 
 newmtl nalari_black_temple_detail
 	Ns 29.0000
@@ -26,8 +26,8 @@ newmtl nalari_black_temple_detail
 	Kd 0.5882 0.5882 0.5882
 	Ks 1.7190 1.7190 1.7190
 	Ke 0.0000 0.0000 0.0000
-	map_Ka D:\10_Other Works\TRYONIX_ALPENISTAR\nalari_black_yellow_detail\nalari_black_yellow_detail.png
-	map_Kd D:\10_Other Works\TRYONIX_ALPENISTAR\nalari_black_yellow_detail\nalari_black_yellow_detail.png
+	map_Ka nalari_black_yellow_detail.png
+	map_Kd nalari_black_yellow_detail.png
 
 newmtl nalari_black_lens_clear_detail
 	Ns 10.0000
@@ -40,9 +40,9 @@ newmtl nalari_black_lens_clear_detail
 	Kd 0.5882 0.5882 0.5882
 	Ks 0.0000 0.0000 0.0000
 	Ke 0.0000 0.0000 0.0000
-	map_Ka D:\10_Other Works\TRYONIX_ALPENISTAR\nalari_black_yellow_detail\nalari_black_lens_yellow_detail.png
-	map_Kd D:\10_Other Works\TRYONIX_ALPENISTAR\nalari_black_yellow_detail\nalari_black_lens_yellow_detail.png
-	map_d D:\10_Other Works\TRYONIX_ALPENISTAR\nalari_black_yellow_detail\nalari_black_lens_yellow_alpha_detail.png
+	map_Ka nalari_black_lens_yellow_detail.png
+	map_Kd nalari_black_lens_yellow_detail.png
+	map_d nalari_black_lens_yellow_alpha_detail.png
 
 newmtl nalari_black_metal_detail
 	Ns 27.0000
@@ -55,5 +55,5 @@ newmtl nalari_black_metal_detail
 	Kd 0.5882 0.5882 0.5882
 	Ks 1.3410 1.3410 1.3410
 	Ke 0.0000 0.0000 0.0000
-	map_Ka D:\10_Other Works\TRYONIX_ALPENISTAR\nalari_black_yellow_detail\nalari_black_yellow_detail.png
-	map_Kd D:\10_Other Works\TRYONIX_ALPENISTAR\nalari_black_yellow_detail\nalari_black_yellow_detail.png
+	map_Ka nalari_black_yellow_detail.png
+	map_Kd nalari_black_yellow_detail.png

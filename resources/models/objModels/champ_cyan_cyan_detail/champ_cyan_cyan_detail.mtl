@@ -57,5 +57,5 @@ newmtl champ_cyan_metal_detail
 	Kd 0.5882 0.5882 0.5882
 	Ks 0.9270 0.9270 0.9270
 	Ke 0.0000 0.0000 0.0000
-	map_Ka D:\10_Other Works\TRYONIX_ALPENISTAR\champ_cyan_cyan_detail\champ_cyan_cyan_detail.png
-	map_Kd D:\10_Other Works\TRYONIX_ALPENISTAR\champ_cyan_cyan_detail\champ_cyan_cyan_detail.png
+	map_Ka champ_cyan_cyan_detail.png
+	map_Kd champ_cyan_cyan_detail.png

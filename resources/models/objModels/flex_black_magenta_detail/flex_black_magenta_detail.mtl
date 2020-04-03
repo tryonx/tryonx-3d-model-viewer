@@ -12,8 +12,8 @@ newmtl flex_black_front_detail
 	Kd 0.5882 0.5882 0.5882
 	Ks 1.8450 1.8450 1.8450
 	Ke 0.0000 0.0000 0.0000
-	map_Ka D:\10_Other Works\TRYONIX_ALPENISTAR\flex_black_magenta_detail\flex_black_magenta_detail.png
-	map_Kd D:\10_Other Works\TRYONIX_ALPENISTAR\flex_black_magenta_detail\flex_black_magenta_detail.png
+	map_Ka flex_black_magenta_detail.png
+	map_Kd flex_black_magenta_detail.png
 	map_d flex_black_magenta_alpha_detail.png
 
 newmtl flex_black_temple_detail

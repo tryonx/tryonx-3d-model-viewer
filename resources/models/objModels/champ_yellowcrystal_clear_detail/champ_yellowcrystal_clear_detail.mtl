@@ -42,9 +42,9 @@ newmtl champ_yellowcrystal_lens_clear_detail
 	Kd 0.5882 0.5882 0.5882
 	Ks 1.1430 1.1430 1.1430
 	Ke 0.0000 0.0000 0.0000
-	map_Ka D:\10_Other Works\TRYONIX_ALPENISTAR\champ_yellowcrystal_clear_detail\champ_yellowcrystal_clear_lens_detail.png
-	map_Kd D:\10_Other Works\TRYONIX_ALPENISTAR\champ_yellowcrystal_clear_detail\champ_yellowcrystal_clear_lens_detail.png
-	map_d D:\10_Other Works\TRYONIX_ALPENISTAR\champ_yellowcrystal_clear_detail\champ_yellowcrystal_clear_lens_alpha_detail.png
+	map_Ka champ_yellowcrystal_clear_lens_detail.png
+	map_Kd champ_yellowcrystal_clear_lens_detail.png
+	map_d champ_yellowcrystal_clear_lens_alpha_detail.png
 
 newmtl champ_yellowcrystal_metal_detail
 	Ns 30.0000
