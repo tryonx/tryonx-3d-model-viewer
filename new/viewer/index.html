@@ -67,7 +67,7 @@
 				this.renderer = null;
 				this.glassesObject = null;
 				this.rotateSpeedX = 0;
-				this.rotateSpeedY = 0.05;
+				this.rotateSpeedY = 0.035;
 				this.rotateSpeedZ = 0;
 
 				this.canvas = elementToBindTo;
@@ -225,7 +225,7 @@
 				app.rotateGlaases(axis);
 			}
 
-			let speedRate = 0.05;
+			let speedRate = 0.035;
 			function speedChange(type, axis) {
 				if (axis === 'x') {
 					if (type === 'up') app.rotateSpeedX += speedRate;
